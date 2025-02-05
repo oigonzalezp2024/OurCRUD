@@ -2,8 +2,7 @@
 
 // fuente: https://www.php.net/manual/es/function.mkdir.php
 
-function proyecto($host, $user, $password, $base)
-{
+function proyecto($host, $user, $password, $base){
     crea_capas();
     crea_archivos();
     crea_header($base); // crea_archivos(); // include 'crea_header.php';
@@ -26,22 +25,19 @@ function proyecto($host, $user, $password, $base)
         $n++;
     }
     rename("proyecto", "Error");
-    rename("Error", "../proyectos/$base");
+    rename("Error", "../proyectos/$base");    
     header("Location: ../proyectos/$base/vista/$inicia.php");
 }
 
-function crea_capas()
-{
+function crea_capas() {
     estructura("proyecto");
-    estructura("proyecto/bbdd");
     estructura("proyecto/modelo");
     estructura("proyecto/vista");
     estructura("proyecto/vista/componentes");
     estructura("proyecto/controlador");
 }
 
-function crea_archivos()
-{
+function crea_archivos() {
     include "copiar_libreria.php";
     include 'crea_modelo.php';
     include 'crea_vista.php';
@@ -52,26 +48,24 @@ function crea_archivos()
     include 'crea_header.php'; // --> crea_header($base);
 }
 
-function accion_crear_archivos($base, $tabla)
-{
+function accion_crear_archivos($base, $tabla) {
     crea_modelo($base, $tabla);
     crear_vista($base, $tabla);
     crea_controlador($base, $tabla);
     crea_clase($base, $tabla);
 }
 
-function estructura($estructura)
-{
+function estructura($estructura) {
     if (!mkdir($estructura, 0777, true)) {
         die('Fallo al crear las carpetas...');
     }
 }
 
-function conexionc($host, $user, $password, $base)
-{
+function conexionc($host, $user, $password, $base) {
     $conn = mysqli_connect($host, $user, $password, $base);
     return $conn;
 }
 
 $base = $_GET['base'];
 proyecto('localhost', 'root', '', $base);
+?>
