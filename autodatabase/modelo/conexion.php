@@ -1,5 +1,4 @@
 <?php
-
 function conexion()
 {
   $host = 'localhost';

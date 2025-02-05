@@ -1,5 +1,4 @@
 <?php
-include_once '../../modelo/configDatabase.php';
 include_once '../../modelo/conexion.php';
 $conn = conexion();
 ?>

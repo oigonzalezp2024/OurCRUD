@@ -4,11 +4,12 @@ $dsn = "mysql:host=localhost;";
 $username = "root";
 $password = "";
 $conexion = new PDO($dsn, $username, $password);
-
 $myDatabase = "autodatabase";
-// $mysql = "DROP DATABASE IF EXISTS $myDatabase;";
+
+$mysql = "DROP DATABASE IF EXISTS $myDatabase;";
 $llamarProcedimiento = $conexion->prepare($mysql);
 $llamarProcedimiento->execute();
+
 $mysql = "CREATE DATABASE $myDatabase;";
 $llamarProcedimiento = $conexion->prepare($mysql);
 $llamarProcedimiento->execute();
@@ -173,3 +174,4 @@ $mysql = "INSERT INTO $myDatabase.myfields (id_field, field_name, field_position
 $llamarProcedimiento = $conexion->prepare($mysql);
 $llamarProcedimiento->execute();
 
+header("Location: ../../index.php");

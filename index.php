@@ -56,8 +56,14 @@ patent rights.
             </select>
             <input style="margin-bottom:11px;" class="btn btn-sm btn-primary" type="submit" value="enviar"><br />
         </form>
+        <a style="margin: 5px; padding:5px; border:2px #ffffff solid; border-radius:16px;" class="navbar-brand" href="./autodatabase/modelo/configDatabase.php">
+            Configuración Inicial
+        </a>
         <a style="margin: 5px; padding:5px; border:2px #ffffff solid; border-radius:16px;" class="navbar-brand" href="./autodatabase/index.php">
             Panel de control
+        </a>
+        <a style="margin: 5px; padding:5px; border:2px #ffffff solid; border-radius:16px;" class="navbar-brand" href="./autodatabase/modelo/configDatabase.php">
+            Resetear
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
