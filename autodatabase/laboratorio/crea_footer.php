@@ -2,9 +2,9 @@
 
 function footer() {
     $footer = "<footer class=\"container-fluid text-center\">\n"
-          . "    <p>Desarrollado por:</p>\n"
-          . "    <p>Óscar Iván González Peña</p>\n"
-          . "    <p>2025</p>\n"
+          . "    <p>Desarrollado por: Óscar Iván González Peña</p>\n"
+          . "    <p>Instructor: Cesar Alfonso Bolado Silva</p>\n"
+          . "    <p>Servicio Nacional de Aprendizaje - SENA</p>\n"
           . "</footer>\n";
     return $footer;
 }
